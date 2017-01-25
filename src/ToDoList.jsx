@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-
 import ListItem from './ListItem.jsx';
+
+import './ToDoList.css';
 
 class ToDoList extends Component {
   render() {
@@ -8,9 +9,11 @@ class ToDoList extends Component {
       return <ListItem key={item.key} item={item.text} />
     })
     return (
-      <ul className="list-unstyled">
-        {toDoItems}
-      </ul>
+      <div className="list">
+        <ul className="list-unstyled">
+          {toDoItems}
+        </ul>
+      </div>
     );
   }
 
